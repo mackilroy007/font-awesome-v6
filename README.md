@@ -6,9 +6,12 @@
 1. download icons.json file
 2. execute following code in node js:
 ```
-var json = require("{file-path}/icons.json"); var FA6Json = {}; Object.keys(json).forEach(iconName => { const icon = json[iconName]; icon.styles.forEach(style => { if (!FA6Json[style]) { FA6Json[style] = []; } FA6Json[style].push(`fa-${style} fa-${iconName}`); }) }); require("fs").writeFile("{file-path}/FA6icons.json", JSON.stringify(FA6Json,null,2), () => {});
+var json = require("{file-path}/icons.json"); 
+var FA6Json = {}; Object.keys(json).forEach(iconName => { const icon = json[iconName]; icon.styles.forEach(style => { if (!FA6Json[style]) { FA6Json[style] = []; } FA6Json[style].push(`fa-${style} fa-${iconName}`); }) }); require("fs").writeFile("{file-path}/FA6icons.json", JSON.stringify(FA6Json,null,2), () => {});
 ```
 >(less ram intensive)
+
+
 
 ### Using Browser
 1. step copy Font Awesome kit (pro or free)
@@ -20,6 +23,11 @@ var FA6Json = {}; Object.keys(json).forEach(iconName => { const icon = json[icon
 ```
 4. copy object from console 
 >(very ram intensive and might crash your dev tools and or cause errors)
+
+
+
+
+
 
 ## Adapted to Font Awesome V6 based V5 cheatsheet (old)
 Type in console on font awesome cheat sheet site  
